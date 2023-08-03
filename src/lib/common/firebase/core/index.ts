@@ -12,7 +12,7 @@ import {
 	setDoc,
 	updateDoc,
       } from "firebase/firestore";
-      import { app } from "../config/firebase";
+      import { app } from "./config";
       
       export class Firebase {
 	private _firestore = getFirestore(app);
