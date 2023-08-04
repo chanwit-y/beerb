@@ -1,5 +1,6 @@
 ---
-import { ImageCard } from "../lib/components/ImageCard";
+import ImageBox from "../lib/components/ImageBox.astro";
+
 ---
 
 <html lang="en">
@@ -12,6 +13,10 @@ import { ImageCard } from "../lib/components/ImageCard";
   </head>
   <body>
     <h1>Astro</h1>
-    <ImageCard />
+    <div class="flex">
+      {Array.from({ length: 5 }).map((_, i) => <ImageBox />)}
+    </div>
+    <!-- <ImageCard client:load /> -->
+    <!-- <ImageBox /> -->
   </body>
 </html>
