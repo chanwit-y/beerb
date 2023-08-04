@@ -2,7 +2,10 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { Blurhash } from 'react-blurhash';
 
+
 export const ImageBlurhash = () => {
+
+
 
 	const width: number = 798;
 	const height: number = 532;
@@ -22,12 +25,15 @@ export const ImageBlurhash = () => {
 			}}
 			// initial={{ opacity: 0, scale: 0.5 }}
 			// animate={{ opacity: 1, scale: 1 }}
+			className="m-2 rounded-md "
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 0.3 }}
 		>
-			<img
-
+			<motion.img
+				initial={{ opacity: 0 }}
+				animate={{ opacity: loaded ? 1 : 0 }}
+				className='rounded-md'
 				style={{
 					width: width,
 					height: height,
@@ -48,7 +54,7 @@ export const ImageBlurhash = () => {
 					height: height,
 					display: loaded ? 'none' : 'block'
 				}}
-				className="m-2 p-1 rounded-md overflow-hidden "
+				className="rounded-md overflow-hidden "
 				hash="U5CuX;yG00k4-;xcbcIB00%w.hV#DhDOMy-="
 			/>
 		</motion.div>

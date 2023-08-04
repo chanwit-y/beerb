@@ -1,7 +1,12 @@
 ---
 import {ImageBlurhash} from '../../components/ImageBlurhash'
+import { getImage } from '@astrojs/image';
 
+const { src } = await getImage({
+  src: 'https://firebasestorage.googleapis.com/v0/b/photo-log-94d7a.appspot.com/o/beer%2F462f9f0c-b635-4606-bdcc-9e4d14f1bbbb.jpeg?alt=media&token=ee8103e0-4ba6-47c8-8992-e2cb43ab2c76',
+  alt: 'My hero image',
+});
 ---
 
 
-<ImageBlurhash client:load />../../components/ImageBlurhash
+<ImageBlurhash client:load />
