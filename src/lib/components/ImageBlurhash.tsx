@@ -7,8 +7,8 @@ export const ImageBlurhash = () => {
 
 
 
-	const width: number = 798;
-	const height: number = 532;
+	const width: number = 600;
+	const height: number = 333.33;
 
 	const [loaded, setLoaded] = useState(false);
 
@@ -20,11 +20,11 @@ export const ImageBlurhash = () => {
 
 		<motion.div
 			style={{
-				width: width,
-				height: height,
+				// width: width,
+				// height: height,
+				width: 500,
+				height: 400,
 			}}
-			// initial={{ opacity: 0, scale: 0.5 }}
-			// animate={{ opacity: 1, scale: 1 }}
 			className="m-2 rounded-md "
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
@@ -52,6 +52,9 @@ export const ImageBlurhash = () => {
 				style={{
 					width: width,
 					height: height,
+
+				// width: 500,
+				// height: 400,
 					display: loaded ? 'none' : 'block'
 				}}
 				className="rounded-md overflow-hidden "
